@@ -1,0 +1,164 @@
+body {
+    background-color: #b2f2bb; /* Pastel light green */
+    font-family: Arial, sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.logo {
+    width: 150px; /* Consistent size for logo */
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.main-image {
+    width: 66.67%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.video-container {
+    position: relative;
+    width: 600px; /* Reduced width */
+    height: 0;
+    padding-bottom: 33.33%; /* Adjusted aspect ratio for smaller video */
+    overflow: hidden;
+    margin: 0 auto; /* Center the video container */
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: fill;
+}
+
+audio {
+    display: none;
+}
+
+header, nav ul li {
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #ffa500; /* Pastel orange */
+    font-family: Arial Black, sans-serif;
+    text-align: center;
+}
+
+.item-name {
+    font-family: Arial Black, sans-serif;
+    color: #ffa500; /* Pastel orange */
+}
+
+.item-id, .item-description, .item-price {
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+td ul li {
+    margin-bottom: 5px;
+}
