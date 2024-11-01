@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timeless Treasures</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <img src="img/TimelessLogo.png" alt="Timeless Treasures Logo" style="width: 500px;">
+        <img src="img/TimelessLogo.png" alt="Timeless Treasures Logo" style="width: 500px;" loading="lazy">
         <nav>
             <ul>
-                <li><a href="home.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="antiques.html" class="nav-link">Antiques</a></li>
-                <li><a href="collectables.html" class="nav-link">Collectibles</a></li>
-                <li><a href="furniture.html" class="nav-link">Furniture</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="home.html" class="nav-link" aria-label="Home">Home</a></li>
+                <li><a href="about.html" class="nav-link" aria-label="About">About</a></li>
+                <li><a href="antiques.html" class="nav-link" aria-label="Antiques">Antiques</a></li>
+                <li><a href="collectables.html" class="nav-link" aria-label="Collectibles">Collectibles</a></li>
+                <li><a href="furniture.html" class="nav-link" aria-label="Furniture">Furniture</a></li>
+                <li><a href="contact.html" class="nav-link" aria-label="Contact Us">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -26,14 +26,14 @@
         <!-- Initial content will be loaded here by JavaScript -->
     </div>
 
-    <audio autoplay loop>
+    <audio autoplay loop loading="lazy">
         <source src="media/Krishna.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
+    <!-- jQuery Script to Handle Dynamic Content Loading -->
     <script>
         $(document).ready(function(){
-            // Load the initial content into the #content div
             $('#content').load('home.html', function(response, status, xhr) {
                 if (status == "error") {
                     var msg = "Sorry but there was an error: ";
@@ -41,10 +41,9 @@
                 }
             });
 
-            // Handle navigation link clicks
             $('.nav-link').on('click', function(e){
-                e.preventDefault(); // Prevent the default link behavior
-                var url = $(this).attr('href'); // Get the URL from the link's href attribute
+                e.preventDefault();
+                var url = $(this).attr('href');
                 $('#content').load(url, function(response, status, xhr) {
                     if (status == "error") {
                         var msg = "Sorry but there was an error: ";
@@ -54,5 +53,8 @@
             });
         });
     </script>
+
+    <!-- Live Reload Script (if you have one) -->
+    <script src="http://localhost:35729/livereload.js"></script> <!-- 
 </body>
 </html>
